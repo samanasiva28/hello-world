@@ -1,0 +1,14 @@
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: TO create a file
+      file:
+        path: "application.yaml"
+        state: touch
+
+    - name: to create a folder
+      file:
+        path: "folderone"
+        state: directory
